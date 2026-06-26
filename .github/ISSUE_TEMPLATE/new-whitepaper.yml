@@ -1,0 +1,48 @@
+name: New Whitepaper
+description: Propose a technical whitepaper
+title: "[Proposal] "
+labels: ["proposal"]
+body:
+  - type: input
+    id: title
+    attributes:
+      label: Title
+      placeholder: "e.g., The Case for Open AV Standards"
+    validations:
+      required: true
+  - type: textarea
+    id: abstract
+    attributes:
+      label: Abstract
+      description: A paragraph summarizing the whitepaper's thesis and conclusions
+    validations:
+      required: true
+  - type: input
+    id: authors
+    attributes:
+      label: Authors
+      description: Comma-separated list of authors
+      placeholder: "Jane Smith, John Doe"
+    validations:
+      required: true
+  - type: textarea
+    id: tags
+    attributes:
+      label: Tags
+      description: Relevant topic tags, one per line
+      placeholder: |
+        standards
+        industry
+        open-source
+  - type: textarea
+    id: outline
+    attributes:
+      label: Outline (optional)
+      description: Brief outline of the proposed sections
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Agreement
+      options:
+        - label: I understand that accepted whitepapers will be licensed under CC BY-SA 4.0
+          required: true
